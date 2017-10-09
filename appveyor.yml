@@ -1,5 +1,4 @@
 # Initial settings
-environment:
 os: WMF 5
 build: false
 
