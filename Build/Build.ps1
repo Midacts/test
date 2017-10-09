@@ -6,7 +6,7 @@ Param(
 $Null = Get-PackageProvider -Name "NuGet" -ForceBootstrap
 
 # Imports the required modules
-$ModuleNames = "BuildHelpers","Pester","psake"
+$ModuleNames = "BuildHelpers","Pester","psake","PSScriptAnalyzer"
 ForEach ( $ModuleName in $ModuleNames )
 {
 	Find-Module -Name $ModuleName | Install-Module -Force -Confirm:$False
