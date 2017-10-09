@@ -49,7 +49,7 @@ Task Test -Depends Init, Analyze {
 	# Gather test results. Store them in a variable and file
 	$TestParams = @{
 		'Path' 			= "$ProjectRoot\Tests"
-		'OutpputFormat'	= "NUinitXml"
+		'OutputFormat'	= "NUinitXml"
 		'OutputFile'	= "$ProjectRoot\$TestFile"
 		'PassThru'		= $True
 	}
