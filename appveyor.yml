@@ -1,0 +1,3 @@
+#Kick off the CI/CD pipeline
+test_script:
+  - ps: . .\Build\Build.ps1 -Task Deploy
