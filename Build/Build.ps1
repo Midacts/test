@@ -9,7 +9,7 @@ $Null = Get-PackageProvider -Name "NuGet" -ForceBootstrap
 $ModuleNames = "BuildHelpers","Pester","psake"
 ForEach ( $ModuleName in $ModuleNames )
 {
-	Find-Module -Name $ModuleName | Install-Module
+	Find-Module -Name $ModuleName | Install-Module -Force -Confirm:$False
 	Import-Module -Name $ModuleName
 }
 
