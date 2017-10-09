@@ -1,4 +1,4 @@
-Remove-Module -Name $env:BHProjectName -Force
+Remove-Module -Name $env:BHProjectName -Force -ErrorAction SilentlyContinue
 Import-Module -Name $env:BHModulePath\$env:BHProjectName.psm1
 
 Describe "$env:BHProjectName - Invoke-FibonacciNumberList" {
@@ -6,7 +6,7 @@ Describe "$env:BHProjectName - Invoke-FibonacciNumberList" {
 	Context "Verifying the function succeeds" {
 
 		$Params = @{
-			'RandomNumbers'			= Get-Content -Path "..\Instructions and Results\random.txt"
+			'RandomNumbers'			= '2810','41781','94909','95489','46871','60699','86286','39596','31877','35279','25','34','92','31649','21855347'
 			'FibonacciNumberLimit'	= 50
 		}
 		$Result = Invoke-FibonacciNumberList @Params
